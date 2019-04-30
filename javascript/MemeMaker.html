@@ -48,7 +48,8 @@
       var canvas = document.querySelector('canvas');
       var ctx = canvas.getContext("2d");
       // Your code here
-      ctx.drawImage(image, topLine, bottomLine, canvas.width, canvas.height);
+      if (image != null)
+        ctx.drawImage(image, topLine, bottomLine, canvas.width, canvas.height);
 
       ctx.strokeStyle = "black";
       ctx.font = "36px Sans-Serif";
