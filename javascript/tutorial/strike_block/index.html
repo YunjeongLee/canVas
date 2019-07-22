@@ -157,6 +157,7 @@
 		else if(leftPressed && paddleX > 0) {
 		    paddleX -= 7;
 		}
+		requestAnimationFrame(draw);
 	}
 
 	// Check whether control keys are pressed and run the corresponding function
@@ -210,7 +211,7 @@
 	    }
 	}
 
-	setInterval(draw, 10);
+	draw();
 </script>
 
 </body>
