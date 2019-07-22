@@ -98,6 +98,13 @@
 	    }
 	}
 
+	// Score record
+	function drawScore() {
+	    ctx.font = "16px Arial";
+	    ctx.fillStyle = "#0095DD";
+	    ctx.fillText("Score: "+score, 8, 20);
+	}
+
 	// Draw lives
 	function drawLives() {
 	    ctx.font = "16px Arial";
@@ -189,13 +196,6 @@
 	            }
 	        }
 	    }
-	}
-
-	// Score record
-	function drawScore() {
-	    ctx.font = "16px Arial";
-	    ctx.fillStyle = "#0095DD";
-	    ctx.fillText("Score: "+score, 8, 20);
 	}
 
 	setInterval(draw, 10);
