@@ -62,9 +62,12 @@
 	    drawPaddle();
 		x += dx;
 		y += dy;
-		// 위아래 모서리에 부딪히면 반대 방향으로!
-		if(y + dy < ballRadius || y + dy > canvas.height - ballRadius) {
+		// 위 모서리에 부딪히면 반대 방향으로! 아래로 떨어지면 game over!
+		if(y + dy < ballRadius) {
 		    dy = -dy;
+		} else if(y + dy > canvas.height-ballRadius) {
+		    alert("GAME OVER");
+		    document.location.reload();
 		}
 		// 왼쪽 오른쪽에 부딪히면 반대 방향으로!
 		if(x + dx < ballRadius || x + dx > canvas.width - ballRadius) {
