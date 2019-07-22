@@ -69,6 +69,13 @@
 		if(x + dx < ballRadius || x + dx > canvas.width - ballRadius) {
 			dx = -dx;
 		}
+		// Paddle의 위치 조정
+		if(rightPressed && paddleX < canvas.width-paddleWidth) {
+		    paddleX += 7;
+		}
+		else if(leftPressed && paddleX > 0) {
+		    paddleX -= 7;
+		}
 	}
 
 	// Check whether control keys are pressed and run the corresponding function
