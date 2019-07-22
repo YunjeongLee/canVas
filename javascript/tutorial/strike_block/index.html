@@ -130,8 +130,19 @@
 		        dy = -dy;
 		    }
 		    else {
-		        alert("GAME OVER");
-		        document.location.reload();
+		        lives--;
+				if(!lives) {
+				    alert("GAME OVER");
+				    document.location.reload();
+				    clearInterval(interval); // Needed for Chrome to end game
+				}
+				else {
+				    x = canvas.width/2;
+				    y = canvas.height-30;
+				    dx = 2;
+				    dy = -2;
+				    paddleX = (canvas.width-paddleWidth)/2;
+				}
 		    }
 		}
 		// 왼쪽 오른쪽에 부딪히면 반대 방향으로!
