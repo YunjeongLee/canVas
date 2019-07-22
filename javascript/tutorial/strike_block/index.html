@@ -38,6 +38,14 @@
 	    drawBall();
 		x += dx;
 		y += dy;
+		// 위아래 모서리에 부딪히면 반대 방향으로!
+		if(y + dy < 0 || y + dy > canvas.height) {
+		    dy = -dy;
+		}
+		// 왼쪽 오른쪽에 부딪히면 반대 방향으로!
+		if(x + dx < 0 || x + dx > canvas.width) {
+			dx = -dx;
+		}
 	}
 	setInterval(draw, 10);
 </script>
