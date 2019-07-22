@@ -74,6 +74,17 @@
 	// Check whether control keys are pressed and run the corresponding function
 	document.addEventListener("keydown", keyDownHandler, false);
 	document.addEventListener("keyup", keyUpHandler, false);
+
+	// Check whether control keys are pressed
+	function keyDownHandler(e) {
+	    if(e.keyCode == 39) {
+	        rightPressed = true;
+	    }
+	    else if(e.keyCode == 37) {
+	        leftPressed = true;
+	    }
+	}
+
 	setInterval(draw, 10);
 </script>
 
