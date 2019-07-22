@@ -16,21 +16,27 @@
 	// Define canvas and tool
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
+
 	// Define Canvas size
 	var x = canvas.width/2;
 	var y = canvas.height-30;
+
 	// Define the velocity of a ball
 	var dx = 2;
 	var dy = -2;
+
 	// Define the ball size
 	var ballRadius = 10;
+
 	// Define paddle size
 	var paddleHeight = 10;
 	var paddleWidth = 75;
 	var paddleX = (canvas.width-paddleWidth)/2;
+
 	// Pressed or not
 	var rightPressed = false;
 	var leftPressed = false;
+
 	// Draw a ball
 	function drawBall() {
 	    ctx.beginPath();
@@ -39,6 +45,7 @@
 	    ctx.fill();
 	    ctx.closePath();
 	}
+
 	// Draw a paddle
 	function drawPaddle() {
 	    ctx.beginPath();
@@ -47,6 +54,7 @@
 	    ctx.fill();
 	    ctx.closePath();
 	}
+
 	// Update canvas
 	function draw() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
