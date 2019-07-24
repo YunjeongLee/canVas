@@ -127,7 +127,7 @@
 		if(y + dy < ballRadius) {
 		    dy = -dy;
 		} else if(y + dy > canvas.height-ballRadius) {
-		    if(x > paddleX && x < paddleX + paddleWidth) {
+		    if(x + ballRadius > paddleX && x - ballRadius < paddleX + paddleWidth) {
 		        dy = -dy;
 		    }
 		    else {
